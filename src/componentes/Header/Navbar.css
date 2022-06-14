@@ -21,3 +21,16 @@
     border-bottom: solid;
     border-color: rgb(99, 0, 0);
 }
+
+.Navbar-nav li a {
+    text-decoration: none;
+    color: rgb(167, 0, 0);
+}
+
+.none {
+    display: none;
+}
+
+.activo{
+    display: block;
+}
