@@ -1,9 +1,8 @@
 
 import '../componentes/Header/Navbar.css';
 import React, {useState} from "react";
-//const suma = document.querySelector('#sum')
-//sconst dec = document.querySelector('#dec')
-const ItemCount =({stock,initial})=>{
+
+const ItemCount =({stock,initial,onAdd})=>{
     const [count,setCount] = useState(0);
 const aumentador =()=>{
     if(count >= initial && count< stock ){
@@ -17,33 +16,23 @@ const sacar =()=>{
         setCount(count - 1);
     }
 }
-/*
-    const aumentador =()=>{
-       setCount(count + 1);
-        if(count >= 9){
 
-            suma.classList.toggle('none')
-       
-        }else if(count>=0){
-            dec.classList.remove('none')
-        }
+const agregar = ()=>{
+    if (onAdd < count){
+        setCount(0);
     }
-
-const sacar = ()=>{
-    setCount(count - 1);
-    if(count <= 1){
-        dec.classList.toggle('none')
-    }else if (count>=10){
-        suma.classList.remove('none')
-    }
-}*/
+}
 
     return(
         <div>
             <p>Stock: {stock}</p>
             <p>{count}</p>
+            <div >
             <button  onClick={aumentador}>Agregar</button>
             <button  onClick={sacar}>Sacar</button>
+            </div>
+            <button onClick= {agregar}>Agregar al carrito {count}</button>
+           
         </div>
     );
 };

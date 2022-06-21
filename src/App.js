@@ -2,7 +2,9 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import './App.css';
 import Navbar from './componentes/Header/Navbar';
 
-
+/*fetch("https://rickandmortyapi.com/api/character")
+.then((res)=> res.json())
+.then((data)=> ()=>);*/
 
 function App() {
   return (
@@ -13,8 +15,11 @@ function App() {
           by Becker Pablo 
         </p>
         <ItemListContainer />
+      
     </div>
+    
   );
+  
 };
 
 export default App;
