@@ -2,7 +2,7 @@
 const CartWidget = ()=>{
     return (
         <div className='carrito'>
-            <i class="text-primary bi bi-cart"></i>
+            <i className="text-primary bi bi-cart"></i>
         </div>
     )
 }

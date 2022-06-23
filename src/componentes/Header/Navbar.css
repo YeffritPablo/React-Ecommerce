@@ -20,25 +20,13 @@
     padding-left: 10px;
     border-bottom: solid;
     border-color: rgb(99, 0, 0);
+    align-items: center;
 }
 
-.Navbar-nav li a {
-    text-decoration: none;
-    color: rgb(167, 0, 0);
-}
-
-.none {
-    display: none;
-}
-
-.activo{
-    display: block;
-}
 
 .carta {
-    width: 400px;
-    min-height: 300px;
-    max-height: 600px;
+    width: 300px;
+    max-height: 550px;
     text-align: center;
 }
 
@@ -47,4 +35,17 @@
     align-items: center;
     justify-content: center;
     margin: 20px;
+
+}
+
+
+.li{
+    text-decoration:  none;
+    color: rgb(103, 0, 151);
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.li{
+    font-size: 20px;
 }
