@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import ItemDetailContainer from '../../componentes/ItemDetailContainer/ItemDetailContainer'
 import Spinner from '../../componentes/Spinner/Spinner';
+
 const Inicio = () => {
   const [timer, setTimer]= useState(false);
 
@@ -9,10 +9,10 @@ const Inicio = () => {
       setTimer(true);
       setTimeout(() => {
           setTimer(false)
-      }, 500);
+      }, 200);
   },[]);
   return (
-    <div> {timer ? <Spinner/> :<ItemDetailContainer/> }</div>
+    <div> {timer ? <Spinner/> : null }</div>
   )
 }
 
