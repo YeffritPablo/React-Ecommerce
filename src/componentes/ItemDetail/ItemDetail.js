@@ -1,8 +1,13 @@
 
 import React from 'react'
 import './ItemDetail.css'
+import ItemCount from '../ItemCount/ItemCount'
 
-export const ItemDetail = ({data}) => {
+function borrar (e){
+  e.ClassList.add('eliminar')
+}
+
+const ItemDetail = ({data}) => {
   return (
 
     <div className='contenedor-item'>
@@ -14,6 +19,9 @@ export const ItemDetail = ({data}) => {
       <p className="card-text">Especie: {data.species} </p>
       <p className="card-text">Genero: {data.gender} </p>
       <div className="btn btn-warning">Nro ID: {data.id}</div>
+      <div className=' m-2'>
+      <ItemCount stock='10' initial='0' onAdd={borrar}/>
+      </div>
       </div>
     </div>
   </div>

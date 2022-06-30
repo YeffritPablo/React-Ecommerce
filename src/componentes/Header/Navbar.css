@@ -49,3 +49,16 @@
 .li{
     font-size: 20px;
 }
+
+
+.nada{
+    display: none;
+}
+
+.ok{
+    display: none;
+}
+
+.a{
+    display: block;
+}

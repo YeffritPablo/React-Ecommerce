@@ -15,8 +15,8 @@ p{
     color: black;
 }
 .carta-info{
-    height: 300px;
-    width: 600px;
+    height: 400px;
+    width: 700px;
     display: flex;
     flex-direction: row;
     border: solid rgb(155, 0, 0) 2px;
