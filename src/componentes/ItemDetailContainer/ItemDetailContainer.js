@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import {Link } from 'react-router-dom'
 import Item from '../ItemListContainer/Item';
-
+import CartWidget from '../CartWidget/CartWidget';
 const ItemDetailContainer = ()=>{
     const [detail, setDetail]= useState([]);
 

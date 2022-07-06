@@ -3,9 +3,7 @@ import React from 'react'
 import './ItemDetail.css'
 import ItemCount from '../ItemCount/ItemCount'
 
-function borrar (e){
-  e.ClassList.add('eliminar')
-}
+
 
 const ItemDetail = ({data}) => {
   return (
@@ -20,7 +18,8 @@ const ItemDetail = ({data}) => {
       <p className="card-text">Genero: {data.gender} </p>
       <div className="btn btn-warning">Nro ID: {data.id}</div>
       <div className=' m-2'>
-      <ItemCount stock='10' initial='0' onAdd={borrar}/>
+      <ItemCount stock='10' initial='0'data={data} />
+
       </div>
       </div>
     </div>

@@ -1,12 +1,17 @@
 
 import '../Header/Navbar.css';
-import  {useState} from "react";
-const no = document.getElementById('si');
-const si = document.getElementById('cajas');
-const ItemCount =({stock,initial,onAdd})=>{
+import  {useState, useContext} from "react";
+import { contexto } from "../CartContext/CartContext";
+
+
+
+
+const ItemCount =({stock,initial, data})=>{
+    const [cont, setCont]= useContext(contexto);
     const [count,setCount] = useState(0);
     const [stocky, setStocky]= useState(stock)
-const aumentador =()=>{
+
+        const aumentador =()=>{
     if(count >= initial && count< stock ){
         setCount(count + 1)
         setStocky(stocky - 1)
@@ -29,19 +34,12 @@ const agregar = ()=>{
     }
 }
 
-const algo=()=>{
-    onAdd(si)
-    setCount(0)
-}
-const eli=()=>{
-    si.classList.add('nada')
-    no.classList.remove('ok')
-}
+
 
 
     return(
         <div>
-            <div className='ok' id='si'>
+            <div className='ok' >
                 <button >Terminar la compra</button>
             </div>
         <div id='cajas' className='caja'>
@@ -51,7 +49,7 @@ const eli=()=>{
             <button  onClick={aumentador} className='btn btn-outline-danger'>Agregar</button>
             <button  onClick={sacar}  className='btn btn-outline-danger'>Sacar</button>
             </div>
-            <button onClick= {eli} className='btn btn-outline-danger'>Agregar al carrito {count}</button>
+            <button onClick={agregar} className='btn btn-outline-danger'>Agregar al carrito </button>
         </div>
         </div>
     );

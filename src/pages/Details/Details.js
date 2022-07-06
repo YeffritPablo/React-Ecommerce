@@ -19,7 +19,7 @@ export const Details = () => {
   return (
     <div>
           <div key={detalle.id}>
-            <ItemDetail data={detalle}/>
+            <ItemDetail data={detalle} datos={detalle.id}/>
           </div>
       </div>
   )
