@@ -16,6 +16,7 @@ export const Details = () => {
     );
   },[id]);
 
+console.log(detalle)
   return (
     <div>
           <div key={detalle.id}>

@@ -3,6 +3,7 @@ import CartWidget from '../CartWidget/CartWidget';
 import { contexto } from '../CartContext/CartContext';
 import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
+
 const Navbar = (props)=>{
 
     return (
